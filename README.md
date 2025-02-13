@@ -5,7 +5,8 @@ This repository demonstrates the [Frontegg Hosted Login Flow](https://developers
 
 ## How to run
 
-- Clone this repo `git clone https://github.com/fxcircus/frontegg-hosted-login-flow.git`
+- Clone this repo
+```git clone https://github.com/fxcircus/frontegg-hosted-login-flow.git```
 - Open the project, navigate to `hosted_login_flow.js` and update the following values with your Frontegg account details:
   ```
   const clientId = 'YOUR_CLIENT_ID'; 
@@ -20,7 +21,9 @@ This repository demonstrates the [Frontegg Hosted Login Flow](https://developers
   // Example: 'https://app-frtqiefxjqn1'
   ```
 
-- Open the terminal, Install the dependencies `npm init -y && npm install`
-- Run the server with `node hosted_login_flow.js`
+- Open the terminal, Install the dependencies
+```npm init -y && npm install```
+- Run the server with
+```node hosted_login_flow.js```
 - Open the browser, navigate to `http://localhost:3000/login`. You should see the login page. Enter your credentials and log in!
 - The logs will be printed in the terminal window
