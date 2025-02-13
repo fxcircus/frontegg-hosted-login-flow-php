@@ -8,9 +8,9 @@ Implementation example of the [Frontegg Hosted Login Flow](https://developers.fr
 - Clone this repo `git clone https://github.com/fxcircus/frontegg-hosted-login-flow.git`
 - Add the values with your Frontegg account configuration ➜
   ```
-  const clientId = 'YOUR_CLIENT_ID'; // clientId from 'Frontegg Portal ➜ [ENVIRONMENT] ➜ Keys & domains', OR the application ID of the application you're loggign in to
+  const clientId = 'YOUR_CLIENT_ID'; // 'Client ID' from 'Frontegg Portal ➜ [ENVIRONMENT] ➜ Keys & domains', OR the application ID of the application you're loggign in to
   const redirectUri = `http://localhost:${port}/callback`;
-  const gateway = 'YOUR_GATEWAY'; // clientId from 'Frontegg Portal ➜ [ENVIRONMENT] ➜ Keys & domains ➜ Domains tab'
+  const gateway = 'YOUR_GATEWAY'; // 'Domain name' from 'Frontegg Portal ➜ [ENVIRONMENT] ➜ Keys & domains ➜ Domains tab'. i.e 'https://app-frtqiefxjqn1'
   ```
 
 - Install the dependencies `npm init -y && npm install`
