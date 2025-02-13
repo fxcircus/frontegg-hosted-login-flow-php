@@ -23,7 +23,7 @@ const gateway = 'YOUR_GATEWAY';
 // Example: 'https://app-frtqiefxjqn1'
   ```
 
-- Open the terminal, Install the dependencies
+- Open the terminal. Run the following commands to initialize the project and install the required packages:
 ```
 npm init -y && npm install
 ```
