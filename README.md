@@ -1,6 +1,6 @@
 # Frontegg Hosted Login Flow
 
-This project demonstrates how to implement Frontegg's Hosted Login Flow using PHP. It provides a simple example of how to integrate Frontegg's authentication system into your PHP application.
+This project demonstrates how to implement [Frontegg's Hosted Login Flow](https://developers.frontegg.com/guides/management/frontegg-idp/native-hosted) using PHP. It provides a simple example of how to integrate Frontegg's authentication system into your PHP application.
 
 ## Prerequisites
 
@@ -35,6 +35,7 @@ This project demonstrates how to implement Frontegg's Hosted Login Flow using PH
    ```
 
 3. Click the "Login with Frontegg" button to start the authentication flow
+![Login Page](screenshots/01_start.png)
 
 ## How It Works
 
@@ -42,6 +43,7 @@ This project demonstrates how to implement Frontegg's Hosted Login Flow using PH
 2. After successful authentication, Frontegg redirects back to your application with an authorization code
 3. The application exchanges this code for access and ID tokens
 4. The tokens are displayed on the success page
+![Successful Authentication](screenshots/02_successful_auth.png)
 
 ## Security Features
 
