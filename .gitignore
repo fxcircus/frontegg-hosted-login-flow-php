@@ -1,1 +1,14 @@
-/node_modules
+# PHP specific
+/vendor/
+composer.lock
+.env
+
+# IDE specific
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS specific
+.DS_Store
+Thumbs.db 

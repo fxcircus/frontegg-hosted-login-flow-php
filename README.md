@@ -1,35 +1,71 @@
 # Frontegg Hosted Login Flow
 
-This repository demonstrates the [Frontegg Hosted Login Flow](https://developers.frontegg.com/guides/management/frontegg-idp/native-hosted).
+This project demonstrates how to implement Frontegg's Hosted Login Flow using PHP. It provides a simple example of how to integrate Frontegg's authentication system into your PHP application.
 
+## Prerequisites
 
-## How to run
+- PHP 7.4 or higher
+- PHP cURL extension enabled
+- A Frontegg account and application
 
-- Clone this repo
-```
-git clone https://github.com/fxcircus/frontegg-hosted-login-flow.git
-```
-- Open the project, navigate to `hosted_login_flow.js` and update the following values with your Frontegg account details:
-```
-const clientId = 'YOUR_CLIENT_ID'; 
-// Find this in Frontegg Portal ➜ [ENVIRONMENT] ➜ Keys & Domains ➜ 'Client ID' 
-// Alternatively, use the Application ID for the app you're logging into.
+## Configuration
 
-const redirectUri = `http://localhost:${port}/callback`; 
-// Use the callback URL for your local environment.
+1. Clone this repository
+2. Update the `config.php` file with your Frontegg credentials:
+   ```php
+   define('CLIENT_ID', 'YOUR_CLIENT_ID');
+   define('API_KEY', 'YOUR_API_KEY');
+   define('GATEWAY', 'YOUR_GATEWAY');
+   ```
 
-const gateway = 'YOUR_GATEWAY'; 
-// Find this in Frontegg Portal ➜ [ENVIRONMENT] ➜ Keys & Domains ➜ Domains tab 
-// Example: 'https://app-frtqiefxjqn1'
-  ```
+3. **Important**: In your Frontegg dashboard, add the following redirect URI:
+   ```
+   http://localhost:3000/callback.php
+   ```
 
-- Open the terminal. Run the following commands to initialize the project and install the required packages:
-```
-npm init -y && npm install
-```
-- Run the server with
-```
-node hosted_login_flow.js
-```
-- Open the browser, navigate to `http://localhost:3000/login`. You should see the login page. Enter your credentials and log in!
-- The logs will be printed in the terminal window
+## Running the Application
+
+1. Start the PHP development server:
+   ```bash
+   php -S localhost:3000
+   ```
+
+2. Open your web browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+3. Click the "Login with Frontegg" button to start the authentication flow
+
+## How It Works
+
+1. When a user clicks the login button, they are redirected to Frontegg's hosted login page
+2. After successful authentication, Frontegg redirects back to your application with an authorization code
+3. The application exchanges this code for access and ID tokens
+4. The tokens are displayed on the success page
+
+## Security Features
+
+- Implements PKCE (Proof Key for Code Exchange) flow
+- Uses secure session handling
+- Implements proper error handling
+- Includes XSS protection through output escaping
+
+## Files
+
+- `index.php` - Entry point with login button
+- `login.php` - Handles the initial login redirect
+- `callback.php` - Processes the OAuth callback and token exchange
+- `config.php` - Configuration settings
+- `utils.php` - Helper functions for code verifier and challenge generation
+
+## Notes
+
+- This is a basic implementation for demonstration purposes
+- In a production environment, you should:
+  - Use HTTPS
+  - Implement proper token storage
+  - Add additional security headers
+  - Handle token refresh
+  - Implement proper error pages
+  - Use environment variables for sensitive data
