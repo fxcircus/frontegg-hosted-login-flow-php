@@ -14,7 +14,6 @@ This project demonstrates how to implement Frontegg's Hosted Login Flow using PH
 2. Update the `config.php` file with your Frontegg credentials:
    ```php
    define('CLIENT_ID', 'YOUR_CLIENT_ID');
-   define('API_KEY', 'YOUR_API_KEY');
    define('GATEWAY', 'YOUR_GATEWAY');
    ```
 

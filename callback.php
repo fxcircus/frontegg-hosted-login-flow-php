@@ -25,7 +25,7 @@ $requestBody = [
 
 // Prepare headers
 $headers = [
-    'Authorization: Basic ' . base64_encode(CLIENT_ID . ':' . API_KEY),
+    'Authorization: Basic ' . base64_encode(CLIENT_ID),
     'Content-Type: application/x-www-form-urlencoded'
 ];
 
